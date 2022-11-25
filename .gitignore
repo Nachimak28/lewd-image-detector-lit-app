@@ -1,3 +1,4 @@
-/download
+/download/*
 /lewd-image-detector-lit-api/saved_model/
-
+/non-essential-assets/*
+/lewd-image-detector-lit-api/private_detector/

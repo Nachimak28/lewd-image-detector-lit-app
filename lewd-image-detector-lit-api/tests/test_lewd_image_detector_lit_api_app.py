@@ -13,13 +13,15 @@ from contextlib import redirect_stdout
 from lightning.app.testing.testing import application_testing, LightningTestApp
 
 
+os.environ["TESTING_LAI"] = "True"
+
 class LightningAppTestInt(LightningTestApp):
     def run_once(self) -> bool:
         f = io.StringIO()
         with redirect_stdout(f):
             super().run_once()
         out = f.getvalue()
-        assert out == "hello from component A\nhello from component B\n"
+        assert "⚡ Lightning Research App! ⚡\n" == out
         return True
 
 

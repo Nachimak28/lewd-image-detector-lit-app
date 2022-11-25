@@ -10,7 +10,8 @@ class LewdImageDetector:
         """
         Pre-setup model load
         """
-        saved_model_path = './saved_model/'
+        # saved_model_path = './saved_model/'
+        saved_model_path = './private_detector/saved_model/'
         
         
         self.model = tf.saved_model.load(saved_model_path)

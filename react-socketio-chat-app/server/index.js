@@ -16,7 +16,7 @@ const io = new Server(server, {
   },
 });
 
-const modelServerUrl = "http://127.0.0.1:57574/api/predict/"; // put your API URL here
+const modelServerUrl = "http://127.0.0.1:53630/api/predict/"; // put your API URL here
 
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);
