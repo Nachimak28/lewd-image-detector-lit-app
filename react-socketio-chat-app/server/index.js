@@ -16,7 +16,8 @@ const io = new Server(server, {
   },
 });
 
-const modelServerUrl = "http://127.0.0.1:53630/api/predict/"; // put your API URL here
+const modelServerUrl =
+  "https://xewbi-01gjsajz6vwfast8kk9t49qzds.litng-ai-03.litng.ai/api/predict/"; // put your API URL here
 
 io.on("connection", (socket) => {
   console.log(`User Connected: ${socket.id}`);

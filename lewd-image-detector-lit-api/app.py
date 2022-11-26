@@ -5,17 +5,17 @@ import lightning as L
 from dataclasses import dataclass
 from lewd_image_detector_lit_api import app as api
 
-@dataclass
-class CustomBuildConfig(L.BuildConfig):
-    """
-    Custom build config defined for API work component.
-    """
-    def build_commands(self):
-        return ["sudo apt-get update", 
-                "sudo apt-get install -y unzip",
-                "curl --output private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip",
-                "unzip -x private_detector.zip"
-                ]
+# @dataclass
+# class CustomBuildConfig(L.BuildConfig):
+#     """
+#     Custom build config defined for API work component.
+#     """
+#     def build_commands(self):
+#         return ["sudo apt-get update", 
+#                 "sudo apt-get install -y unzip",
+#                 "curl --output private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip",
+#                 "unzip -x private_detector.zip"
+#                 ]
 
 
 class FastAPIWork(L.LightningWork):
@@ -23,7 +23,7 @@ class FastAPIWork(L.LightningWork):
     API Work component to run the image classifier put behind the api
     """
     def __init__(self, parallel: bool = False, **kwargs):
-        super().__init__(parallel=parallel, cloud_build_config=CustomBuildConfig(), **kwargs)
+        super().__init__(parallel=parallel, **kwargs)
     
     def run(self):
         uvicorn.run(api, host=self.host, port=self.port)

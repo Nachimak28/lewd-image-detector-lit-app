@@ -11,6 +11,12 @@ class LewdImageDetector:
         Pre-setup model load
         """
         # saved_model_path = './saved_model/'
+        if os.path.exists('./private_detector/saved_model/') == False:
+            # download the model 
+            os.system('curl --output private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip')
+            # unzip
+            os.system("unzip -x private_detector.zip")
+        
         saved_model_path = './private_detector/saved_model/'
         
         

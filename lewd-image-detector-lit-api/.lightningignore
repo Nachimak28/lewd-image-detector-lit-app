@@ -1,0 +1,16 @@
+/private_detector
+/saved_model
+/__pycache__
+
+.git
+.shared
+.storage
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/

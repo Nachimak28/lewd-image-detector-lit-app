@@ -10,7 +10,7 @@ The topic is sensitive and serves as an important step in content moderation and
 
 ## Folder structure
 1) lewd-image-detector-lit-api 
-This folder contains the codebase for the model deployment and FastAPI hosting
+This folder contains the codebase for the model deployment and FastAPI hosting using the Lightning framework
 
 2) react-socketio-chat-app
 This folder contains two sub folders - `client` and `server`. `server` is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one join a room, send text messages and images 
@@ -47,7 +47,8 @@ Prerequisites:
 
 * Run the server first. Run the command: `npm start`. The server runs at localhost:3001
 
-* Run the client. Run the command in a new terminal tab: `npm start`. Open URL localhost:3000 in two tabs, create 2 users join same chat room and test
+* Run the client. Run the command in a new terminal tab: `npm start`. Open URL localhost:3000 in two tabs, create 2 users join same chat room and test. 
+The UI might be a bit buggy because the user suddenly gets disonnected from the socketio server, just refresh and it should start working again. Since this is for demo purposes, I'm not going deep into the JS aspect of the workflow. 
 
 * Test away
 
