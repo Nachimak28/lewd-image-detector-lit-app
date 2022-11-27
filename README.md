@@ -9,11 +9,14 @@ This project shows the power of using reusable lightning apps which Companies wi
 The topic is sensitive and serves as an important step in content moderation and cyber-flashing for social platforms. A lot of social media platforms still [employ people to do content moderation](https://www.livemint.com/news/india/inside-the-world-of-india-s-content-mods-11584543074609.html). A lot of effort has already been put into [AI based content moderation](https://www.forbes.com/sites/forbestechcouncil/2022/06/14/the-growing-role-of-ai-in-content-moderation/?sh=c7135534a178) approaches and is an active area of research. Automated content moderation ensures that no humans read your data (if users care about privacy) especially if harmful content is shared over chat applications for say - Dating platforms.
 
 ## Folder structure
-1) lewd-image-detector-lit-api 
+1) `lewd-image-detector-lit-api`
+
 This folder contains the codebase for the model deployment and FastAPI hosting using the Lightning framework
 
-2) react-socketio-chat-app
-This folder contains two sub folders - `client` and `server`. `server` is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one join a room, send text messages and images 
+2) `react-socketio-chat-app`
+
+This folder contains two sub folders - `client` and `server`. 
+Code in `server` directory is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one join a room, send text messages and images 
 
 In order to successfully test the system, please run the API first, then the socketio server and finally the client apps.
 
@@ -38,6 +41,8 @@ I haven't dockerized the Chat app codebase but if you wish please go ahead and d
 
 Prerequisites:
 * You need to have node js and npm installed on your system. Follow [this guide](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) if not installed already for your respective OS
+
+* Change directory to `react-socketio-chat-app`
 
 * Inside the `server` directory, run the command `npm i` to install neessary js packages
 
