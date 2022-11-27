@@ -1,4 +1,5 @@
 import os
+import platform
 import base64
 import tempfile
 import tensorflow as tf
@@ -6,31 +7,30 @@ from .utils import get_current_time, read_image
 
 
 class LewdImageDetector:
-    def _setup(self):
-        """
-        Pre-setup model load
-        """
-        # saved_model_path = './saved_model/'
-        if os.path.exists('./private_detector/saved_model/') == False:
-            # download the model 
-            os.system('curl --output private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip')
-            # unzip
-            os.system("unzip -x private_detector.zip")
-        
-        saved_model_path = './private_detector/saved_model/'
-        
-        
-        self.model = tf.saved_model.load(saved_model_path)
 
     def __init__(self):
         """
         A simple class which is responsible for generating predictions for incoming images
         """
-        self.model = None
-
-        self._setup()
+        saved_model_path = '../private_detector/saved_model/'
 
         self.temp_dir = tempfile.mkdtemp()
+
+        if os.path.exists(saved_model_path) == False:
+            self.model_path = os.path.join(self.temp_dir, 'private_detector/saved_model/')
+            if platform.system() != "Windows":
+                print('downloading')
+                # download the model 
+                os.system(f'curl --output {self.temp_dir}/private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip')
+                # unzip
+                os.system(f"unzip -x {self.temp_dir}/private_detector.zip")
+            # for windows, please do this manually
+        else:
+            self.model_path = saved_model_path
+        
+        # load model
+        self.model = tf.saved_model.load(self.model_path)
+
 
     def predict(self, encoded_image_str: str):
         """

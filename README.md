@@ -54,6 +54,6 @@ The UI might be a bit buggy because the user suddenly gets disonnected from the 
 
 
 ## TODO
-- [ ] Write unit tests
+- [x] Write unit tests
 - [ ] Test on Lightning cloud
 - [ ] Demo video? - maybe

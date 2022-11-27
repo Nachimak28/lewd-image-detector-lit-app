@@ -30,7 +30,8 @@ def test_templatename_app():
     os.chdir("..")
 
     cwd = os.getcwd()
-    cwd = os.path.join(cwd, "private_detector_lit_api/app.py")
+    # cwd = os.path.join(cwd, "lewd-image-detector-lit-api/app.py")
+    cwd = os.path.join(cwd, "app.py")
     command_line = [
         cwd,
         "--blocking",
