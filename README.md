@@ -1,9 +1,9 @@
-# WIP - Demo showing integration of Bumble's lewd image detector model into a Chat app
+# Demo showing integration of Bumble's lewd image detector model into a Chat app
 
 This is a simple demo showing integration of [Bumble's Lewd Image detector model](https://github.com/bumble-tech/private-detector) into a chat app. 
 
 ## What's the need for this project?
-This project shows the power of using reusable lightning apps which Companies without an in-house ML team or necessary acumen can simply integrate into their existing workflows by doing an extremely simple thing like making an API call. 
+This project shows the power of using reusable lightning apps which Companies without an in-house ML team or necessary acumen can simply integrate into their existing workflows by doing an extremely simple thing like making an API call.
 
 ## Why this topic?
 The topic is sensitive and serves as an important step in content moderation and cyber-flashing for social platforms. A lot of social media platforms still [employ people to do content moderation](https://www.livemint.com/news/india/inside-the-world-of-india-s-content-mods-11584543074609.html). A lot of effort has already been put into [AI based content moderation](https://www.forbes.com/sites/forbestechcouncil/2022/06/14/the-growing-role-of-ai-in-content-moderation/?sh=c7135534a178) approaches and is an active area of research. Automated content moderation ensures that no humans read your data (if users care about privacy) especially if harmful content is shared over chat applications for say - Dating platforms.
@@ -59,12 +59,15 @@ Prerequisites:
 * Run the client. Run the command in a new terminal tab: `npm start`. Open URL localhost:3000 in two tabs, create 2 users join same chat room and test. 
 The UI might be a bit buggy because the user suddenly gets disonnected from the socketio server, just refresh and it should start working again. Since this is for demo purposes, I'm not going deep into the JS aspect of the workflow. 
 
-* Test away
+* Test away. Please run the demo responsibly because the testing may involve NSFW stuff.
+
+A situation where the image sent by one party to another in the chat is classified as Lewd by the classifier API, the chat window for the user on the receiving end looks like this. 
+
+![Lewd image detected in chat](assets/Capture.PNG)
 
 
-
+If there are any suggestions/issues/improvements that can be made in the app, please create issues and I'll look into it. Thank you!!
 
 ## TODO
 - [x] Write unit tests
-- [ ] Test on Lightning cloud
-- [ ] Demo video? - maybe
+- [x] Test on Lightning cloud
