@@ -12,7 +12,10 @@ class LewdImageDetector:
         """
         A simple class which is responsible for generating predictions for incoming images
         """
-        saved_model_path = '../private_detector/saved_model/'
+        saved_model_path = './private_detector/saved_model/'
+        # for windows, download the model, unzip and place it at the directory level
+        # /lewd-image-detector-lit-app/lewd-image-detector-lit-api 
+        
 
         self.temp_dir = tempfile.mkdtemp()
 
