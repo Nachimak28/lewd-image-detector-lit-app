@@ -18,7 +18,7 @@ This folder contains the codebase for the model deployment and FastAPI hosting u
 **Note**: The socketio chat app is a clone of [this  repo](https://github.com/machadop1407/react-socketio-chat-app) (all credits for the original codebase to the author). All I've done here is make minor modifications to relay images along with text.
 
 This folder contains two sub folders - `client` and `server`. 
-Code in `server` directory is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one join a room, send text messages and images 
+Code in `server` directory is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one can join a room, send text messages and images 
 
 In order to successfully test the system, please run the API first, then the socketio server and finally the client apps.
 
@@ -59,7 +59,7 @@ Prerequisites:
 * Run the client. Run the command in a new terminal tab: `npm start`. Open URL localhost:3000 in two tabs, create 2 users join same chat room and test. 
 The UI might be a bit buggy because the user suddenly gets disonnected from the socketio server, just refresh and it should start working again. Since this is for demo purposes, I'm not going deep into the JS aspect of the workflow. 
 
-* Test away. Please run the demo responsibly because the testing may involve NSFW stuff.
+* Test away. Please run the demo responsibly.
 
 A situation where the image sent by one party to another in the chat is classified as Lewd by the classifier API, the chat window for the user on the receiving end looks like this. 
 
