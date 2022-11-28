@@ -15,7 +15,7 @@ This folder contains the codebase for the model deployment and FastAPI hosting u
 
 2) `react-socketio-chat-app`
 
-**Note**: The socketio chat app is a clone of [this  repo](https://github.com/machadop1407/react-socketio-chat-app) (all credits for the original codebase to the author) with modifications to relay images along with text. 
+**Note**: The socketio chat app is a clone of [this  repo](https://github.com/machadop1407/react-socketio-chat-app) (all credits for the original codebase to the author). All I've done here is make minor modifications to relay images along with text.
 
 This folder contains two sub folders - `client` and `server`. 
 Code in `server` directory is the socketio backend responsible for handling the chat data flow. `client` is the react app with a minimal chat interface where one join a room, send text messages and images 
@@ -38,6 +38,8 @@ In order to successfully test the system, please run the API first, then the soc
 - Run the following command
 `lightning run app app.py --cloud`
 
+**Note**: The App URL given by lightning cloud is only for the swagger API docs and not the API URL. To obtain the API URL, just call the Health API from the swagger docs and in the dev console of the browser you shall see the actual API URL in the network call which is to be put into the SocketIO JS server. 
+
 ## Running the Chat app
 I haven't dockerized the Chat app codebase but if you wish please go ahead and do so to be able to run it anywhere you wish
 
@@ -58,6 +60,8 @@ Prerequisites:
 The UI might be a bit buggy because the user suddenly gets disonnected from the socketio server, just refresh and it should start working again. Since this is for demo purposes, I'm not going deep into the JS aspect of the workflow. 
 
 * Test away
+
+
 
 
 ## TODO
