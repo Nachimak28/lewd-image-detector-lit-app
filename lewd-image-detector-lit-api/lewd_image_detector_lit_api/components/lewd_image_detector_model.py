@@ -23,7 +23,7 @@ class LewdImageDetector:
                 # download the model 
                 os.system(f'curl --output {self.temp_dir}/private_detector.zip https://storage.googleapis.com/private_detector/private_detector.zip')
                 # unzip
-                os.system(f"unzip -x {self.temp_dir}/private_detector.zip")
+                os.system(f"unzip -x {self.temp_dir}/private_detector.zip -d {self.temp_dir}")
             # for windows, please do this manually
         else:
             self.model_path = saved_model_path
